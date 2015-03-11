@@ -94,6 +94,21 @@
             $this->assertEquals("hi", $result);
         }
 
+        function testReplaceOneWordAtEndMultiwordString()
+        {
+            //Arrange
+            $replace_one_word_multiword_string_end = new FindAndReplace;
+            $main_string = "Hello world";
+            $thing_to_find = "world";
+            $replace_with = "cosmos";
+
+            //Act
+            $result = $replace_one_word_multiword_string_end->replace($main_string, $thing_to_find, $replace_with);
+
+            //Assert
+            $this->assertEquals("Hello cosmos", $result);
+        }
+
     }
 
 ?>
