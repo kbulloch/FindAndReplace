@@ -4,13 +4,22 @@
     {
         function replace($user_string, $thing_to_replace, $what_to_replace_with)
         {
-            // $user_string = strtolower($user_string);
-            // $thing_to_replace = strtolower()
+            $explode_user_string = explode(" ", $user_string);
 
-            if(strtolower($user_string) == strtolower($thing_to_replace)){
-                $user_string = $what_to_replace_with;
+            $somearray = array();
+
+            foreach ($explode_user_string as $word) {
+                if(strtolower($word) == strtolower($thing_to_replace)){
+                    array_push($somearray, $what_to_replace_with);
+                }
+                else {
+                    array_push($somearray, $word);
+                }
             }
-            return $user_string;
+
+            $output = implode(" ", $somearray);
+
+            return $output;
         }
     }
 
