@@ -33,3 +33,7 @@ Find and Replace Specs
 8   Replace multiple words in the middle of a multi-word string
     Input: "The blackest blackest night" "blackest" "darkest"
     Output: "The darkest darkest night"
+
+9   Replace multiple instances of the same word throughout a multi-word string
+    Input: "How much wood would a wood chuck chuck if a wood chuck could chuck wood" "wood" "rock"
+    Output: "How much rock would a rock chuck chuck if a rock chuck could chuck rock"
