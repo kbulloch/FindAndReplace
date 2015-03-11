@@ -136,8 +136,22 @@
             $result = $replace_multiple_instances_of_word_in_string->replace($main_string, $thing_to_find, $replace_with);
 
             //Assert
-            $this->assertEquals("The darkest darkest night", $result);            
+            $this->assertEquals("The darkest darkest night", $result);
+        }
 
+        function testMultipleInstacesOfWordInRandomSpots()
+        {
+            //Arrange
+            $replace_multiple_instances_of_word_in_random_spot = new FindAndReplace;
+            $main_string = "How much wood would a wood chuck chuck if a wood chuck could chuck wood";
+            $thing_to_find = "wood";
+            $replace_with = "rock";
+
+            //Act
+            $result = $replace_multiple_instances_of_word_in_random_spot->replace($main_string, $thing_to_find, $replace_with);
+
+            //Assert
+            $this->assertEquals("How much rock would a rock chuck chuck if a rock chuck could chuck rock", $result);
         }
 
     }

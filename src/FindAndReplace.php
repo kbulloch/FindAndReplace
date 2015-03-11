@@ -6,18 +6,18 @@
         {
             $explode_user_string = explode(" ", $user_string);
 
-            $somearray = array();
+            $replacement = array();
 
             foreach ($explode_user_string as $word) {
                 if(strtolower($word) == strtolower($thing_to_replace)){
-                    array_push($somearray, $what_to_replace_with);
+                    array_push($replacement, $what_to_replace_with);
                 }
                 else {
-                    array_push($somearray, $word);
+                    array_push($replacement, $word);
                 }
             }
 
-            $output = implode(" ", $somearray);
+            $output = implode(" ", $replacement);
 
             return $output;
         }
