@@ -109,6 +109,38 @@
             $this->assertEquals("Hello cosmos", $result);
         }
 
+        function testReplaceWordInMiddleOfString()
+        {
+            //Arrange
+            $replace_word_in_middle_of_string = new FindAndReplace;
+            $main_string = "Walk the dog";
+            $thing_to_find = "the";
+            $replace_with = "my";
+
+            //Act
+            $result = $replace_word_in_middle_of_string->replace($main_string, $thing_to_find, $replace_with);
+
+            //Assert
+            $this->assertEquals("Walk my dog", $result);
+        }
+
+        function testReplaceMultipleInstancesOfWordInString()
+        {
+            //Arrange
+            $replace_multiple_instances_of_word_in_string = new FindAndReplace;
+            $main_string = "The blackest blackest night";
+            $thing_to_find = "blackest";
+            $replace_with = "darkest";
+
+            //Act
+            $result = $replace_multiple_instances_of_word_in_string->replace($main_string, $thing_to_find, $replace_with);
+
+            //Assert
+            $this->assertEquals("The darkest darkest night", $result);            
+
+        }
+
     }
+
 
 ?>
