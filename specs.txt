@@ -22,6 +22,11 @@ Find and Replace Specs
     Input: "Hello" "hello" "Hi"
     Output: "Hi"
 
+5.5
+    Replace case-insesitive inverted case
+    Input: "hello" "HELLO" "hi"
+    Output: "hi"
+
 6   Replace one word at the end of a multi-word string
     Input: "Hello world" "world" "cosmos"
     Output: "Hello cosmos"

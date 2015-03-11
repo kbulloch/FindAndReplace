@@ -48,6 +48,36 @@
             //Assert
             $this->assertEquals("a", $result);
         }
+
+        function testReplaceMultiLetterString()
+        {
+            //Arrange
+            $replace_multiletter_string = new FindAndReplace;
+            $main_string = "Hello";
+            $thing_to_find = "Hello";
+            $replace_with = "Hi";
+
+            //Act
+            $result = $replace_multiletter_string->replace($main_string, $thing_to_find, $replace_with);
+
+            //Assert
+            $this->assertEquals("Hi", $result);
+        }
+
+        function testReplaceCaseInsensitiveString()
+        {
+            //Arrange
+            $replace_case_insensitive_string = new FindAndReplace;
+            $main_string = "Hello";
+            $thing_to_find = "hello";
+            $replace_with = "Hi";
+
+            //Act
+            $result  = $replace_case_insensitive_string->replace($main_string, $thing_to_find, $replace_with);
+
+            //Assert
+            $this->assertEquals("Hi", $result);
+        }
     }
 
 ?>
