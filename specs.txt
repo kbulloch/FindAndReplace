@@ -2,34 +2,34 @@ Find and Replace Specs
 
 //syntax: "String" "What to find" "What to replace with"
 
-1
+1   Return the input string
     Input: "a" "a" "a"
     Output: "a"
 
-2
+2   Replace input string
     Input: "a" "a" "b"
     Output: "b"
 
-3
+3   If "what to find" is not found, do not replace input string
     Input: "a" "b" "c"
     Output: "a"
 
-4
+4   Replace multiple-letter string with another multiple-letter string
     Input: "Hello" "Hello" "Hi"
     Output: "Hi"
 
-5
+5   Replace string with another string, case-insensitive
     Input: "Hello" "hello" "Hi"
     Output: "Hi"
 
-6
+6   Replace one word at the end of a multi-word string
     Input: "Hello world" "world" "cosmos"
     Output: "Hello cosmos"
 
-7
+7   Replace one word in the middle of a multi-word string
     Input: "Walk the dog" "the" "my"
     Output: "Walk my dog"
 
-8
+8   Replace multiple words in the middle of a multi-word string
     Input: "The blackest blackest night" "blackest" "darkest"
     Output: "The darkest darkest night"
