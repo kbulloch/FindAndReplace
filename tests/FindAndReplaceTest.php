@@ -18,6 +18,21 @@
             //Assert
             $this->assertEquals("a", $result);
         }
+
+        function testReplaceWithDifferentLetter()
+        {
+            //Arrange
+            $replace_with_different_letter = new FindAndReplace;
+            $main_string = "a";
+            $thing_to_find = "a";
+            $replace_with = "b";
+
+            //Act
+            $result = $replace_with_different_letter->replace($main_string, $thing_to_find, $replace_with);
+
+            //Assert
+            $this->assertEquals("b", $result);
+        }
     }
 
 ?>
