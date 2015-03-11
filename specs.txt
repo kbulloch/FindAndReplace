@@ -18,12 +18,12 @@ Find and Replace Specs
     Input: "Hello" "Hello" "Hi"
     Output: "Hi"
 
-5   Replace string with another string, case-insensitive
+5   Replace capitalized main string
     Input: "Hello" "hello" "Hi"
     Output: "Hi"
 
 5.5
-    Replace case-insesitive inverted case
+    Replace case-insesitive all strings
     Input: "hello" "HELLO" "hi"
     Output: "hi"
 
