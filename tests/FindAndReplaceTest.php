@@ -33,6 +33,21 @@
             //Assert
             $this->assertEquals("b", $result);
         }
+
+        function testCannotFindInString()
+        {
+            //Arrange
+            $cannot_find_in_string = new FindAndReplace;
+            $main_string = "a";
+            $thing_to_find = "b";
+            $replace_with = "c";
+
+            //Act
+            $result = $cannot_find_in_string->replace($main_string, $thing_to_find, $replace_with);
+
+            //Assert
+            $this->assertEquals("a", $result);
+        }
     }
 
 ?>
