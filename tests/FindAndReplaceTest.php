@@ -64,20 +64,36 @@
             $this->assertEquals("Hi", $result);
         }
 
-        function testReplaceCaseInsensitiveString()
+        function testReplaceCapitalizedMainString()
         {
             //Arrange
-            $replace_case_insensitive_string = new FindAndReplace;
+            $replace_capitalized_main_string = new FindAndReplace;
             $main_string = "Hello";
             $thing_to_find = "hello";
             $replace_with = "Hi";
 
             //Act
-            $result  = $replace_case_insensitive_string->replace($main_string, $thing_to_find, $replace_with);
+            $result  = $replace_capitalized_main_string->replace($main_string, $thing_to_find, $replace_with);
 
             //Assert
             $this->assertEquals("Hi", $result);
         }
+
+        function testReplaceCaseInsensitiveAllStrings()
+        {
+            //Arrange
+            $replace_caseinsensitive_all_strings = new FindAndReplace;
+            $main_string = "hello";
+            $thing_to_find = "HELLO";
+            $replace_with = "hi";
+
+            //Act
+            $result = $replace_caseinsensitive_all_strings->replace($main_string, $thing_to_find, $replace_with);
+
+            //Assert
+            $this->assertEquals("hi", $result);
+        }
+
     }
 
 ?>
