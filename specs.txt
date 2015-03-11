@@ -1,0 +1,35 @@
+Find and Replace Specs
+
+//syntax: "String" "What to find" "What to replace with"
+
+1
+    Input: "a" "a" "a"
+    Output: "a"
+
+2
+    Input: "a" "a" "b"
+    Output: "b"
+
+3
+    Input: "a" "b" "c"
+    Output: "a"
+
+4
+    Input: "Hello" "Hello" "Hi"
+    Output: "Hi"
+
+5
+    Input: "Hello" "hello" "Hi"
+    Output: "Hi"
+
+6
+    Input: "Hello world" "world" "cosmos"
+    Output: "Hello cosmos"
+
+7
+    Input: "Walk the dog" "the" "my"
+    Output: "Walk my dog"
+
+8
+    Input: "The blackest blackest night" "blackest" "darkest"
+    Output: "The darkest darkest night"
